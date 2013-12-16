@@ -1,0 +1,25 @@
+{
+  "name": "easeless",
+  "version": "0.0.0",
+  "description": "Easing mix-ins for LESS",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tappily/easeless.git"
+  },
+  "keywords": [
+    "CSS",
+    "LESS",
+    "ease",
+    "interpolation"
+  ],
+  "author": "tappily",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tappily/easeless/issues"
+  },
+  "homepage": "https://github.com/tappily/easeless"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "easeless",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tappily/easeless",
+  "authors": [
+    "tappily <tappily.b@gmail.com>"
+  ],
+  "description": "Easing mix-ins for LESS",
+  "main": "Gruntfile.js",
+  "keywords": [
+    "CSS",
+    "LESS",
+    "ease",
+    "interpolation"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
