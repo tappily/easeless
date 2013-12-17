@@ -1,4 +1,22 @@
 {
-    "stops": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
-    "types": ["ease-in", "ease-out", "ease-inout"]
+    "stops": [1,2,3,4,5,6,7,8,9,10,11,12],
+    "types": ["ease-linear", "ease-in", "ease-out", "ease-inout"],
+    "range": ["5%","100%"],
+    "power": 1.5,
+    "signatures": [{
+        "name": "interpolation",
+        "desc": "ease-in, ease-out, ease-inout"
+    },
+    {
+        "name": "power",
+        "desc": "1-5"
+    },
+    {
+        "name": "input",
+        "desc": "A number (or unit) between 0 and 1 or less than 'compare'"
+    },
+    {
+        "name": "compare",
+        "desc": "(Optional) A number or unit, eg. 100%"
+    }]
 }

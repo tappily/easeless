@@ -1,6 +1,37 @@
 @import "../../bower_components/loopless/dist/less/loop";
 @import "main";
 
+body {
+  font-family: "pt serif caption", serif;
+  padding: 1ex 1em;
+  max-width: 48em;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.2rem;
+  line-height: 1.1;
+  margin: .5ex 0;
+}
+
+p, dl {
+  font-size: 1.23rem;
+  line-height: 1.45;
+  margin: 2ex 0;
+}
+
+dt {
+  text-decoration: underline;
+}
+
+code {
+  margin: 1ex 1em;
+}
+
+figure {
+  display: inline-block;
+}
+
 .ease-graph {
   display: block;
   clear: both;
@@ -10,13 +41,14 @@
 
 .ease-graph-bar {
   display: inline-block;
+  vertical-align: text-bottom;
   width: 1em;
   background-color: rgb(0,0,0);
 }
 
 
-@ease-stops: 15;
-@ease-min: 1%;
+@ease-stops: 12;
+@ease-min: 5%;
 @ease-max: 100%;
 @ease-power: 1.5;
 
@@ -24,18 +56,22 @@
   @i: @index - @from;
   @o: @to - @from;
 
+  &-linear-@{index} {
+    height: @ease-min + (@ease-max - @ease-min) * (@i / @o);
+  }
+
   &-in-@{index} {
-    .ease-in(@i, @o, @ease-power);
+    .ease(ease-in, @ease-power, @i, @o);
     height: @ease-min + (@ease-max - @ease-min) * @ease;
   }
 
   &-out-@{index} {
-    .ease-out(@i, @o, @ease-power);
+    .ease(ease-out, @ease-power, @i, @o);
     height: @ease-min + (@ease-max - @ease-min) * @ease;
   }
 
   &-inout-@{index} {
-    .ease-inout(@i, @o, @ease-power);
+    .ease(ease-inout, @ease-power, @i, @o);
     height: @ease-min + (@ease-max - @ease-min) * @ease;
   }
 }

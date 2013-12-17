@@ -1,30 +1,15 @@
-.ease(@interpolation, @current, @total, @power:1) when(@interpolation = ease-in) {
-  @ease: pow(@current / @total, @power);
+.ease(@interpolation, @power, @x, @compare) {
+  .ease(@interpolation, @power, (@x / @compare));
 }
 
-.ease(@interpolation, @current, @total, @power:1) when(@interpolation = ease-out) {
-  @ease: 1 - pow(1 - @current / @total, @power);
+.ease(@interpolation, @power, @x) when(@interpolation = ease-in) {
+  @ease: pow(@x, @power);
 }
 
-.ease-in(@current, @total, @power:1) {
-  .ease(ease-in, @current, @total, @power);
+.ease(@interpolation, @power, @x) when(@interpolation = ease-out) {
+  @ease: 1 - pow(1 - @x, @power);
 }
 
-.ease-out(@current, @total, @power:1) {
-  .ease(ease-out, @current, @total, @power);
-}
-
-.ease-inout(@current, @total, @power:1) when((@total / 2) > @current) {
-  .ease(ease-in, @current, @total, @power);
-  content: 'in';
-}
-
-.ease-inout(@current, @total, @power:1) when((@total / 2) = @current) {
-  @ease: .5;
-  content: '@{current}';
-}
-
-.ease-inout(@current, @total, @power:1) when((@total / 2) < @current) {
-  .ease(ease-out, @current, @total , @power);
-  content: 'out';
+.ease(@interpolation, @power, @x) when(@interpolation = ease-inout) {
+  @ease: pow(@x, @power) /  (pow(@x, @power) + pow(1 - @x, @power));
 }
