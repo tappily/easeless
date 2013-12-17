@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Ease please?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=".//css/easeless.css">
+    <link href="//fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <h1>Ease please?</h1>
+</header>
+
+<p>This LESS mix-in is designed to apply an easing pattern to traditionally arbitrary styling groups such as text size, fills,
+    box sizes, etc. The mix-in accepts the following parameters.</p>
+<dl>
+    
+        <dt>interpolation</dt>
+        <dd>ease-in, ease-out, ease-inout</dd>
+    
+        <dt>power</dt>
+        <dd>1-5</dd>
+    
+        <dt>input</dt>
+        <dd>A number (or unit) between 0 and 1 or less than &#x27;compare&#x27;</dd>
+    
+        <dt>compare</dt>
+        <dd>(Optional) A number or unit, eg. 100%</dd>
+    
+</dl>
+<p>The following examples use 12 points evenly plotted between 5%
+    and 100%. The group of points is first passed through 1:1, then interpolated with ease.</p>
+
+<figure>
+    <div class="ease-graph">
+        
+            <span class="ease-graph-bar ease-linear-1">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-2">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-3">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-4">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-5">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-6">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-7">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-8">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-9">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-10">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-11">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-linear-12">&nbsp;</span>
+        
+    </div>
+    <figcaption>
+        
+            <code>//nothing here</code>
+        
+    </figcaption>
+</figure>
+
+<figure>
+    <div class="ease-graph">
+        
+            <span class="ease-graph-bar ease-in-1">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-2">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-3">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-4">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-5">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-6">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-7">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-8">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-9">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-10">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-11">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-in-12">&nbsp;</span>
+        
+    </div>
+    <figcaption>
+        
+            <code>.ease(ease-in, 1.5, 5%, 100%);</code>
+        
+    </figcaption>
+</figure>
+
+<figure>
+    <div class="ease-graph">
+        
+            <span class="ease-graph-bar ease-out-1">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-2">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-3">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-4">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-5">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-6">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-7">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-8">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-9">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-10">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-11">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-out-12">&nbsp;</span>
+        
+    </div>
+    <figcaption>
+        
+            <code>.ease(ease-out, 1.5, 5%, 100%);</code>
+        
+    </figcaption>
+</figure>
+
+<figure>
+    <div class="ease-graph">
+        
+            <span class="ease-graph-bar ease-inout-1">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-2">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-3">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-4">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-5">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-6">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-7">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-8">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-9">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-10">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-11">&nbsp;</span>
+        
+            <span class="ease-graph-bar ease-inout-12">&nbsp;</span>
+        
+    </div>
+    <figcaption>
+        
+            <code>.ease(ease-inout, 1.5, 5%, 100%);</code>
+        
+    </figcaption>
+</figure>
+
+</body>
+</html>
