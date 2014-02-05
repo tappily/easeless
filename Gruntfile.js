@@ -9,17 +9,13 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 assets: 'dist/specimen/',
-                data: ['bower.json'],
-                styles: ['<%=pkg.name%>.css'],
+                data: ['bower.json', 'specimen/data/**/*.json'],
                 helpers: 'specimen/helper/helper-*.js',
                 layoutdir: 'specimen/layout',
+                layout: 'default.hbs',
                 partials: 'specimen/partial/**/*.hbs'
             },
             specimen: {
-                options: {
-                    data: ['specimen/data/*.json'],
-                    layout: 'default.hbs'
-                },
                 cwd: 'specimen/page',
                 expand: true,
                 src: ['*.hbs'],
@@ -27,7 +23,7 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            dist: ['dist']
+            all: ['dist', '.grunt']
         },
         connect: {
             options: {
@@ -75,7 +71,7 @@ module.exports = function(grunt) {
                     }]
             },
             main: {
-                src: ['src/less/main.less']
+                src: ['src/less/index.less']
             },
             specimen: {
                 src: ['src/less/specimen.less']
@@ -90,7 +86,7 @@ module.exports = function(grunt) {
         less: {
             specimen: {
                 files: [
-                    {'dist/specimen/css/<%=pkg.name%>.css': 'src/less/specimen.less'}
+                    {'dist/specimen/css/index.css': 'src/less/specimen.less'}
                 ]
             }
         },

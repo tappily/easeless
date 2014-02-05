@@ -4,17 +4,17 @@ title: Ease please?
 <p>This LESS function is designed to apply an easing pattern to traditionally arbitrary styling groups such as text
     size, fills, box sizes, etc. The function accepts the following parameters.</p>
 <dl>
-    {{#each eases/signatures}}
+    {{#each signatures}}
         <dt>{{name}}</dt>
         <dd>{{desc}}</dd>
     {{/each}}
 </dl>
-<p>The following examples use {{eases/stops/length}} points evenly plotted between {{eases/range/0.}}
-    and {{eases/range/1.}}. The group of points is first passed through 1:1, then interpolated with ease.</p>
-{{#each eases/types}}
+<p>The following examples use {{stops/length}} points evenly plotted between {{range/0.}}
+    and {{range/1.}}. The group of points is first passed through 1:1, then interpolated with ease.</p>
+{{#each types}}
     <figure>
         <div class="ease-graph">
-            {{#each ../eases/stops}}
+            {{#each ../stops}}
                 <span class="ease-graph-bar {{../.}}-{{.}}">&nbsp;</span>
             {{/each}}
         </div>
@@ -22,7 +22,7 @@ title: Ease please?
             {{#compare . '==' 'ease-linear'}}
                 <code>//nothing here</code>
             {{else}}
-                <code>.ease({{../.}}, {{../../eases/power}}, {{../../eases/range/0.}}, {{../../eases/range/1.}});</code>
+                <code>.ease({{../.}}, {{../../power}}, {{../../range/0.}}, {{../../range/1.}});</code>
             {{/compare}}
         </figcaption>
     </figure>

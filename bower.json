@@ -6,7 +6,7 @@
     "tappily <tappily.b@gmail.com>"
   ],
   "description": "Easing mix-ins for LESS",
-  "main": "Gruntfile.js",
+  "main": "src/less/index",
   "keywords": [
     "CSS",
     "LESS",
