@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         assemble: {
             options: {
-                assets: 'dist/specimen/',
+                assets: '.grunt/connect/specimen/asset',
                 data: ['bower.json', 'specimen/data/**/*.json'],
                 helpers: 'specimen/helper/helper-*.js',
                 layoutdir: 'specimen/layout',
@@ -19,21 +19,17 @@ module.exports = function(grunt) {
                 cwd: 'specimen/page',
                 expand: true,
                 src: ['*.hbs'],
-                dest: 'dist/specimen/'
+                dest: '.grunt/connect/specimen/'
             }
         },
         clean: {
             all: ['dist', '.grunt']
         },
         connect: {
-            options: {
-                port: 9000,
-                livereload: 35729
-            },
             livereload: {
                 options: {
                     open: true,
-                    base: ['dist/specimen']
+                    base: ['.grunt/connect/specimen']
                 }
             }
         },
@@ -47,19 +43,19 @@ module.exports = function(grunt) {
                         filter: 'isFile'
                     }]
             },
-            specimen: {
+            assets: {
                 files: [{
                     expand: true,
                     cwd: 'specimen',
                     src: ['asset/*'],
-                    dest: 'dist/specimen',
+                    dest: '.grunt/connect/specimen',
                     filter: 'isFile'
                 }]
             }
         },
         'gh-pages': {
             options: {
-                base: 'dist/specimen'
+                base: '.grunt/connect/specimen'
             },
             src: '**/*'
         },
@@ -86,7 +82,7 @@ module.exports = function(grunt) {
         less: {
             specimen: {
                 files: [
-                    {'dist/specimen/css/index.css': 'src/less/specimen.less'}
+                    {'.grunt/connect/specimen/asset/css/index.css': 'src/less/specimen.less'}
                 ]
             }
         },
@@ -105,25 +101,17 @@ module.exports = function(grunt) {
                 tasks: ['lesslint', 'less']
             },
             livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
                 files: [
-                    'dist/**/*'
+                    '.grunt/connect/specimen/**/*'
                 ]
             }
         }
     });
 
-    grunt.registerTask('default', [
-        'clean',
-        'test',
-        'build'
-    ]);
-
+    grunt.registerTask('default', []);
     grunt.registerTask('test', ['jshint', 'lesslint']);
-    grunt.registerTask('build', ['clean', 'test', 'less', 'copy']);
-    grunt.registerTask('build:specimen', ['clean', 'jshint', 'lesslint:specimen', 'copy:specimen', 'less:specimen', 'assemble']);
-    grunt.registerTask('deploy:specimen', ['build:specimen', 'gh-pages']);
-    grunt.registerTask('live', ['build:specimen', 'connect:livereload', 'watch']);
+    grunt.registerTask('build', ['clean', 'test', 'copy']);
+    grunt.registerTask('site', ['clean', 'test', 'copy:assets', 'less', 'assemble']);
+    grunt.registerTask('deploy', ['site', 'gh-pages']);
+    grunt.registerTask('live', ['site', 'connect', 'watch']);
 };
