@@ -10,6 +10,6 @@
   @ease: 1 - pow(1 - @x, @power);
 }
 
-.ease(@interpolation, @power, @x) when(@interpolation = ease-inout) {
+.ease(@interpolation, @power, @x) when(@interpolation = ease-in-out) {
   @ease: pow(@x, @power) /  (pow(@x, @power) + pow(1 - @x, @power));
 }

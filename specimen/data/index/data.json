@@ -2,12 +2,12 @@
     "family": "PT Serif Caption",
     "styles": ["index.css"],
     "stops": [1,2,3,4,5,6,7,8,9,10,11,12],
-    "types": ["ease-linear", "ease-in", "ease-out", "ease-inout"],
+    "types": ["ease-linear", "ease-in", "ease-out", "ease-in-out"],
     "range": ["5%","100%"],
     "power": 1.5,
     "signatures": [{
         "name": "interpolation",
-        "desc": "ease-in, ease-out, ease-inout"
+        "desc": "ease-in, ease-out, ease-in-out"
     },
         {
             "name": "power",
