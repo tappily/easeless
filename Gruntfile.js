@@ -59,20 +59,6 @@ module.exports = function(grunt) {
             },
             src: '**/*'
         },
-        lesslint: {
-            options: {
-                formatters: [{
-                        id: 'csslint-xml',
-                        dest: 'report/lesslint.xml'
-                    }]
-            },
-            main: {
-                src: ['src/less/index.less']
-            },
-            specimen: {
-                src: ['src/less/specimen.less']
-            }
-        },
         jshint: {
             options: {
                 jshintrc: '.jshintrc'
@@ -109,7 +95,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', []);
-    grunt.registerTask('test', ['jshint', 'lesslint']);
+    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('build', ['clean', 'test', 'copy']);
     grunt.registerTask('site', ['clean', 'test', 'copy:assets', 'less', 'assemble']);
     grunt.registerTask('deploy', ['site', 'gh-pages']);

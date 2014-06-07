@@ -56,7 +56,7 @@ figure {
 @ease-max: 100%;
 @ease-power: 1.5;
 
-.loop-mix-in(@selector, @index, @from, @to) when(@selector = '.ease') {
+.loop-in(@selector, @index, @from, @to) when(@selector = '.ease') {
   @i: @index - @from;
   @o: @to - @from;
 
@@ -80,4 +80,4 @@ figure {
   }
 }
 
-.loop(1,@ease-stops,'.ease');
+.loop(in, '.ease', 1, @ease-stops);

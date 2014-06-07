@@ -23,18 +23,17 @@
   },
   "homepage": "https://github.com/tappily/easeless",
   "devDependencies": {
-    "assemble": "~0.4.33",
-    "grunt": "~0.4.2",
+    "assemble": "^0.4.37",
+    "grunt": "^0.4.5",
     "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-connect": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-contrib-csslint": "~0.1.2",
-    "grunt-contrib-jshint": "~0.6.5",
-    "grunt-contrib-less": "~0.7.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-gh-pages": "~0.9.0",
-    "grunt-lesslint": "~0.13.0",
-    "grunt-release": "~0.5.1",
-    "load-grunt-tasks": "~0.1.3"
+    "grunt-contrib-connect": "^0.5.0",
+    "grunt-contrib-copy": "^0.4.1",
+    "grunt-contrib-csslint": "^0.1.2",
+    "grunt-contrib-jshint": "^0.6.5",
+    "grunt-contrib-less": "^0.7.0",
+    "grunt-contrib-watch": "^0.5.3",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-release": "^0.5.1",
+    "load-grunt-tasks": "^0.1.3"
   }
 }
