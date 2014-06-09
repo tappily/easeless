@@ -1,0 +1,188 @@
+body {
+  font-family: "pt serif caption", serif;
+  padding: 1ex 1em;
+  max-width: 48em;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 4.2rem;
+  line-height: 1.1;
+  margin: 1ex 0;
+}
+p,
+dl {
+  font-size: 1.23rem;
+  line-height: 1.45;
+  margin: 2ex 0;
+}
+dt {
+  text-decoration: underline;
+}
+code {
+  margin: 1ex 1em;
+}
+figure {
+  display: inline-block;
+}
+@media screen and (max-width: 480px) {
+  figure {
+    display: block;
+    margin: 0;
+  }
+}
+.ease-graph {
+  display: block;
+  clear: both;
+  margin: 1ex 1em;
+  height: 10em;
+}
+.ease-graph-bar {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1em;
+  background-color: #000000;
+}
+.ease-linear-1 {
+  height: 5%;
+}
+.ease-in-1 {
+  height: 5%;
+}
+.ease-out-1 {
+  height: 5%;
+}
+.ease-in-out-1 {
+  height: 5%;
+}
+.ease-linear-2 {
+  height: 13.63636364%;
+}
+.ease-in-2 {
+  height: 7.60396161%;
+}
+.ease-out-2 {
+  height: 17.65550366%;
+}
+.ease-in-out-2 {
+  height: 7.91207585%;
+}
+.ease-linear-3 {
+  height: 22.27272727%;
+}
+.ease-in-3 {
+  height: 12.36511566%;
+}
+.ease-out-3 {
+  height: 29.69303647%;
+}
+.ease-in-out-3 {
+  height: 14.00820468%;
+}
+.ease-linear-4 {
+  height: 30.90909091%;
+}
+.ease-in-4 {
+  height: 18.53058144%;
+}
+.ease-out-4 {
+  height: 41.07907475%;
+}
+.ease-in-out-4 {
+  height: 22.74159428%;
+}
+.ease-linear-5 {
+  height: 39.54545455%;
+}
+.ease-in-5 {
+  height: 25.8316929%;
+}
+.ease-out-5 {
+  height: 51.77395605%;
+}
+.ease-in-out-5 {
+  height: 33.65733683%;
+}
+.ease-linear-6 {
+  height: 48.18181818%;
+}
+.ease-in-6 {
+  height: 34.11317588%;
+}
+.ease-out-6 {
+  height: 61.72973644%;
+}
+.ease-in-out-6 {
+  height: 46.0449768%;
+}
+.ease-linear-7 {
+  height: 56.81818182%;
+}
+.ease-in-7 {
+  height: 43.27026356%;
+}
+.ease-out-7 {
+  height: 70.88682412%;
+}
+.ease-in-out-7 {
+  height: 58.9550232%;
+}
+.ease-linear-8 {
+  height: 65.45454545%;
+}
+.ease-in-8 {
+  height: 53.22604395%;
+}
+.ease-out-8 {
+  height: 79.1683071%;
+}
+.ease-in-out-8 {
+  height: 71.34266317%;
+}
+.ease-linear-9 {
+  height: 74.09090909%;
+}
+.ease-in-9 {
+  height: 63.92092525%;
+}
+.ease-out-9 {
+  height: 86.46941856%;
+}
+.ease-in-out-9 {
+  height: 82.25840572%;
+}
+.ease-linear-10 {
+  height: 82.72727273%;
+}
+.ease-in-10 {
+  height: 75.30696353%;
+}
+.ease-out-10 {
+  height: 92.63488434%;
+}
+.ease-in-out-10 {
+  height: 90.99179532%;
+}
+.ease-linear-11 {
+  height: 91.36363636%;
+}
+.ease-in-11 {
+  height: 87.34449634%;
+}
+.ease-out-11 {
+  height: 97.39603839%;
+}
+.ease-in-out-11 {
+  height: 97.08792415%;
+}
+.ease-linear-12 {
+  height: 100%;
+}
+.ease-in-12 {
+  height: 100%;
+}
+.ease-out-12 {
+  height: 100%;
+}
+.ease-in-out-12 {
+  height: 100%;
+}
