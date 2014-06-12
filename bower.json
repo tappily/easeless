@@ -22,6 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "loopless": "~2"
+    "loopless": "^2.0.0"
   }
 }
