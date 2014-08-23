@@ -2,14 +2,16 @@
   .ease(@interpolation, @power, (@x / @compare));
 }
 
-.ease(@interpolation, @power, @x) when(@interpolation = ease-in) {
-  @ease: pow(@x, @power);
-}
-
-.ease(@interpolation, @power, @x) when(@interpolation = ease-out) {
-  @ease: 1 - pow(1 - @x, @power);
-}
-
-.ease(@interpolation, @power, @x) when(@interpolation = ease-in-out) {
-  @ease: pow(@x, @power) /  (pow(@x, @power) + pow(1 - @x, @power));
+.ease(@interpolation, @power, @x) {
+  & when(@interpolation = ease-in) {
+    @ease: pow(@x, @power);
+  }
+  
+  & when(@interpolation = ease-out) {
+    @ease: 1 - pow(1 - @x, @power);
+  }
+  
+  & when(@interpolation = ease-in-out) {
+    @ease: pow(@x, @power) /  (pow(@x, @power) + pow(1 - @x, @power));
+  }
 }
