@@ -65,18 +65,21 @@ figure {
   }
 
   &-in-@{index} {
-    .ease(ease-in, @ease-power, @i, @o);
-    height: @ease-min + (@ease-max - @ease-min) * @ease;
+    .ease(ease-in, @ease-power, @i @o, {
+      height: @ease-min + (@ease-max - @ease-min) * @ease;
+    });
   }
 
   &-out-@{index} {
-    .ease(ease-out, @ease-power, @i, @o);
-    height: @ease-min + (@ease-max - @ease-min) * @ease;
+    .ease(ease-out, @ease-power, @i @o, {
+      height: @ease-min + (@ease-max - @ease-min) * @ease;
+    });
   }
 
   &-in-out-@{index} {
-    .ease(ease-in-out, @ease-power, @i, @o);
-    height: @ease-min + (@ease-max - @ease-min) * @ease;
+    .ease(ease-in-out, @ease-power, @i @o, {
+      height: @ease-min + (@ease-max - @ease-min) * @ease;
+    });
   }
 }
 
