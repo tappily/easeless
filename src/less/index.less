@@ -1,17 +1,31 @@
-.ease(@interpolation, @power, @x, @compare) {
-  .ease(@interpolation, @power, (@x / @compare));
-}
+.ease(@interpolation, @power, @input, @rules) {
 
-.ease(@interpolation, @power, @x) {
-  & when(@interpolation = ease-in) {
-    @ease: pow(@x, @power);
+  .compare(@comparison) {
+
+    @_input: extract(@input, 1) / @comparison;
+
+    & when(@interpolation = ease-in) {
+      @ease: pow(@_input, @power);
+      @rules();
+    }
+
+    & when(@interpolation = ease-out) {
+      @ease: 1 - pow(1 - @_input, @power);
+      @rules();
+    }
+
+    & when(@interpolation = ease-in-out) {
+      @ease: pow(@_input, @power) /  (pow(@_input, @power) + pow(1 - @_input, @power));
+      @rules();
+    }
   }
-  
-  & when(@interpolation = ease-out) {
-    @ease: 1 - pow(1 - @x, @power);
+
+  & when (length(@input) < 2) {
+    .compare(1);
   }
-  
-  & when(@interpolation = ease-in-out) {
-    @ease: pow(@x, @power) /  (pow(@x, @power) + pow(1 - @x, @power));
+
+  & when (length(input) < 3) {
+    .compare(extract(@input, 2));
   }
+
 }

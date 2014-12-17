@@ -15,10 +15,10 @@
         },
         {
             "name": "input",
-            "desc": "A number (or unit) between 0 and 1 or less than 'compare'"
+            "desc": "A number (or unit) between 0 and 1 or a range e.g., 50% 100%"
         },
         {
-            "name": "compare",
-            "desc": "(Optional) A number or unit, eg. 100%"
+            "name": "rules",
+            "desc": "A ruleset that will be augmented with an @ease variable."
         }]
 }
